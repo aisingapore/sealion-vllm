@@ -30,7 +30,9 @@
         "repetition_penalty": 1.2
     }'
   ```
-  <img width="1094" alt="sealion-vllm-test" src="https://github.com/ren-lee/sealion-vllm/assets/62876165/bc719366-4d3c-46b7-81fd-14c524502807">
+  <img width="1094" alt="sealion-vllm-test" src="https://github.com/aisingapore/sealion-vllm/assets/62876165/99153fd5-afd7-404f-96ec-cd57e07ce45e">
+
+
 
 ## Customisation
 - To use another model:
