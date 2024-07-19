@@ -2,7 +2,9 @@
 
 ## Requirements
 - [Docker](https://docs.docker.com/engine/install/)
-- GPU: compute capability 7.0 or higher (e.g., V100, T4, RTX20xx, A100, L4, H100, etc.). The requirement is from https://docs.vllm.ai/en/latest/getting_started/installation.html#requirements
+- GPU: compute capability 7.0 or higher (e.g., V100, T4, RTX20xx, A100, L4, H100, etc.)
+- CUDA 12.1
+- Check https://docs.vllm.ai/en/latest/getting_started/installation.html#requirements for the up to date requirements
 
 ## Quick Start
 - Download [SEA-LION-7B-Instruct-GPTQ](https://huggingface.co/aisingapore/sea-lion-7b-instruct-gptq)
