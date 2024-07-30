@@ -1,26 +1,21 @@
 services:
   sealion-vllm:
-    build: .
+    image: vllm/vllm-openai:v0.5.3
     container_name: sealion-vllm
     ports:
       - "8000:8000"
     restart: no
     volumes:
-      - ./models/${MODEL_NAME:-sea-lion-7b-instruct-gptq}:/models/${MODEL_NAME:-sea-lion-7b-instruct-gptq}
-      - ./sealion/mpt.py:/workspace/vllm/model_executor/models/mpt.py
-      - ./sealion/chat.jinja:/workspace/chat.jinja
+      - ./models/${MODEL_NAME:-llama3-8b-cpt-sealionv2-instruct}:/models/${MODEL_NAME:-llama3-8b-cpt-sealionv2-instruct}
     deploy:
       resources:
         reservations:
           devices:
             - capabilities: ["gpu"]
     command: [
-      "--dtype=half",
+      "--dtype", "half",
       "--max-model-len", "512",
-      "--quantization", "gptq",
-      "--trust-remote-code",
       "--enforce-eager",
-      "--chat-template", "/workspace/chat.jinja",
-      "--served-model-name", "${MODEL_NAME:-sea-lion-7b-instruct-gptq}",
-      "--model", "/models/${MODEL_NAME:-sea-lion-7b-instruct-gptq}"
+      "--served-model-name", "${MODEL_NAME:-llama3-8b-cpt-sealionv2-instruct}",
+      "--model", "/models/${MODEL_NAME:-llama3-8b-cpt-sealionv2-instruct}"
     ]
