@@ -5,6 +5,7 @@
 - GPU: compute capability 7.0 or higher (e.g., V100, T4, RTX20xx, A100, L4, H100, etc.)
 - CUDA 12.1
 - Check https://docs.vllm.ai/en/latest/getting_started/installation.html#requirements for the up to date requirements
+- 80GB of disk storage for the model and docker image
 
 ## Quick Start
 - Download [LLaMA3 8B CPT SEA-LIONv2 Instruct](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct)
