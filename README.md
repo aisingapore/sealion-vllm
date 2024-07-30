@@ -9,7 +9,7 @@
 
 ## Quick Start
 - Download [LLaMA3 8B CPT SEA-LIONv2 Instruct](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct)
-- Copy the model or add a symbolic link in the ```models``` directory. The path is ```./models/sea-lion-7b-instruct-gptq```. For example, if the model was downloaded to ```~/models/sea-lion-7b-instruct-gptq```, the symbolic link is added by:
+- Copy the model or add a symbolic link in the ```models``` directory. The path is ```./models/llama3-8b-cpt-sealionv2-instruct```. For example, if the model was downloaded to ```~/models/llama3-8b-cpt-sealionv2-instruct```, the symbolic link is added by:
   ```bash
   ln -s ~/models/llama3-8b-cpt-sealionv2-instruct models/
   ```
