@@ -1,12 +1,12 @@
 services:
   sealion-vllm:
-    image: vllm/vllm-openai:v0.5.3
+    image: vllm/vllm-openai:v0.5.5
     container_name: sealion-vllm
     ports:
       - "8000:8000"
     restart: no
     volumes:
-      - ./models/${MODEL_NAME:-llama3-8b-cpt-sealionv2-instruct}:/models/${MODEL_NAME:-llama3-8b-cpt-sealionv2-instruct}
+      - ./models/${MODEL_NAME:-llama3-8b-cpt-sea-lionv2.1-instruct}:/models/${MODEL_NAME:-llama3-8b-cpt-sea-lionv2.1-instruct}
     deploy:
       resources:
         reservations:
@@ -16,6 +16,6 @@ services:
       "--dtype", "half",
       "--max-model-len", "512",
       "--enforce-eager",
-      "--served-model-name", "${MODEL_NAME:-llama3-8b-cpt-sealionv2-instruct}",
-      "--model", "/models/${MODEL_NAME:-llama3-8b-cpt-sealionv2-instruct}"
+      "--served-model-name", "${MODEL_NAME:-llama3-8b-cpt-sea-lionv2.1-instruct}",
+      "--model", "/models/${MODEL_NAME:-llama3-8b-cpt-sea-lionv2.1-instruct}"
     ]
