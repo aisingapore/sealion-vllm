@@ -39,5 +39,5 @@
   - Download the model to the ```models``` directory.
   - Update the ```$MODEL_NAME``` environment variable. For example, if the model is downloaded to ```./models/foo-model-30b```:
     ```bash
-    export $MODEL_NAME=foo-model-30b
+    export MODEL_NAME=foo-model-30b
     ```
