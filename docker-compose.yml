@@ -2,6 +2,10 @@ services:
   sealion-vllm:
     image: vllm/vllm-openai:v0.6.3
     container_name: sealion-vllm
+    environment:
+      # Disable the NVIDIA constraints
+      # If the environment meets the constraints, this environment variable can be removed
+      - NVIDIA_DISABLE_REQUIRE=true
     ports:
       - "8000:8000"
     restart: no
