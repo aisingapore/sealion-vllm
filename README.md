@@ -7,12 +7,33 @@
 - Check https://docs.vllm.ai/en/latest/getting_started/installation.html#requirements for the up to date requirements
 - 80GB of disk storage for the model and docker image
 
-## Quick Start
+## SEA-LION
+This section describes the setup of the SEA-LION models.
+
+### SEA-LION V2.1
 - Download [LLaMA3 8B CPT SEA-LIONv2.1 Instruct](https://huggingface.co/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct)
-- Copy the model or add a symbolic link in the ```models``` directory. The path is ```./models/llama3-8b-cpt-sea-lionv2.1-instruct```. For example, if the model was downloaded to ```~/models/llama3-8b-cpt-sea-lionv2.1-instruct```, the symbolic link is added by:
+- Copy the model or add a symbolic link in the `models` directory. The path is `./models/llama3-8b-cpt-sea-lionv2.1-instruct`. For example, if the model was downloaded to `~/downloads/llama3-8b-cpt-sea-lionv2.1-instruct`, the symbolic link is added by:
   ```bash
-  ln -s ~/models/llama3-8b-cpt-sea-lionv2.1-instruct models/
+  ln -s ~/downloads/llama3-8b-cpt-sea-lionv2.1-instruct models/
   ```
+
+### SEA-LION V3
+- Download [Gemma2 9B CPT SEA-LIONv3 Instruct](https://huggingface.co/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct)
+- Set these values to `null` in `config.json` in the model directory.
+  ```config.json
+  "attn_logit_softcapping": null,
+  "final_logit_softcapping": null,
+  ```
+- Copy the model or add a symbolic link in the `models` directory. The path is `./models/gemma2-9b-cpt-sea-lionv3-instruct`. For example, if the model was downloaded to `~/downloads/gemma2-9b-cpt-sea-lionv3-instruct`, the symbolic link is added by:
+  ```bash
+  ln -s ~/downloads/gemma2-9b-cpt-sea-lionv3-instruct models/
+  ```
+- Set `MODEL_NAME`.
+  ```bash
+   export MODEL_NAME=gemma2-9b-cpt-sea-lionv3-instruct
+   ```
+
+## Start vLLM
 - Start the service.
   ```bash
   docker compose up
