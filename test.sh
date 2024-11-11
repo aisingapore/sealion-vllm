@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# Set the default value of MODEL_NAME
+: ${MODEL_NAME:="llama3-8b-cpt-sea-lionv2.1-instruct"}
+
 curl http://localhost:8000/v1/completions \
     -H "Content-Type: application/json" \
     -d '{
