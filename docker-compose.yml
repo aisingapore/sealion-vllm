@@ -4,7 +4,7 @@ services:
     container_name: sealion-vllm
     environment:
       # Disable the NVIDIA constraints
-      # If the environment meets the constraints, this environment variable can be removed
+      # Remove this environment variable if the environment satisfies the constraints
       - NVIDIA_DISABLE_REQUIRE=true
     ports:
       - "8000:8000"
