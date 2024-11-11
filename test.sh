@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Check if MODEL_NAME is set, otherwise set a default value
+# Set the default value of MODEL_NAME
 : ${MODEL_NAME:="llama3-8b-cpt-sea-lionv2.1-instruct"}
 
 curl http://localhost:8000/v1/completions \
