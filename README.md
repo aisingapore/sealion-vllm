@@ -19,11 +19,6 @@ This section describes the setup of the SEA-LION models.
 
 ### SEA-LION v3
 - Download [Gemma2 9B CPT SEA-LIONv3 Instruct](https://huggingface.co/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct).
-- Set these values to `null` in `config.json` in the model directory.
-  ```config.json
-  "attn_logit_softcapping": null,
-  "final_logit_softcapping": null,
-  ```
 - Copy the model or add a symbolic link in the `models` directory. The path is `./models/gemma2-9b-cpt-sea-lionv3-instruct`. For example, if the model was downloaded to `~/downloads/gemma2-9b-cpt-sea-lionv3-instruct`, the symbolic link is added by:
   ```bash
   ln -s ~/downloads/gemma2-9b-cpt-sea-lionv3-instruct models/
