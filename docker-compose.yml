@@ -10,7 +10,7 @@ services:
       - "8000:8000"
     restart: no
     volumes:
-      - ./models/${MODEL_NAME:-llama3-8b-cpt-sea-lionv2.1-instruct}:/models/${MODEL_NAME:-llama3-8b-cpt-sea-lionv2.1-instruct}
+      - ./models/${MODEL_NAME:-Llama-SEA-LION-v3-8B-IT}:/models/${MODEL_NAME:-Llama-SEA-LION-v3-8B-IT}
     deploy:
       resources:
         reservations:
@@ -20,6 +20,6 @@ services:
       "--dtype", "half",
       "--max-model-len", "512",
       "--enforce-eager",
-      "--served-model-name", "${MODEL_NAME:-llama3-8b-cpt-sea-lionv2.1-instruct}",
-      "--model", "/models/${MODEL_NAME:-llama3-8b-cpt-sea-lionv2.1-instruct}"
+      "--served-model-name", "${MODEL_NAME:-Llama-SEA-LION-v3-8B-IT}",
+      "--model", "/models/${MODEL_NAME:-Llama-SEA-LION-v3-8B-IT}"
     ]

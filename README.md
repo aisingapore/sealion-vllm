@@ -10,22 +10,22 @@
 ## SEA-LION
 This section describes the setup of the SEA-LION models.
 
-### SEA-LION v2.1
-- Download [LLaMA3 8B CPT SEA-LIONv2.1 Instruct](https://huggingface.co/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct).
-- Copy the model or add a symbolic link in the `models` directory. The path is `./models/llama3-8b-cpt-sea-lionv2.1-instruct`. For example, if the model was downloaded to `~/downloads/llama3-8b-cpt-sea-lionv2.1-instruct`, the symbolic link is added by:
+### Llama-SEA-LION-v3-8B-IT
+- Download [Llama-SEA-LION-v3-8B-IT](https://huggingface.co/aisingapore/Llama-SEA-LION-v3-8B-IT).
+- Copy the model or add a symbolic link in the `models` directory. The path is `./models/Llama-SEA-LION-v3-8B-IT`. For example, if the model was downloaded to `~/downloads/Llama-SEA-LION-v3-8B-IT`, the symbolic link is added by:
   ```bash
-  ln -s ~/downloads/llama3-8b-cpt-sea-lionv2.1-instruct models/
+  ln -s ~/downloads/Llama-SEA-LION-v3-8B-IT models/
   ```
 
-### SEA-LION v3
-- Download [Gemma2 9B CPT SEA-LIONv3 Instruct](https://huggingface.co/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct).
-- Copy the model or add a symbolic link in the `models` directory. The path is `./models/gemma2-9b-cpt-sea-lionv3-instruct`. For example, if the model was downloaded to `~/downloads/gemma2-9b-cpt-sea-lionv3-instruct`, the symbolic link is added by:
+### Gemma-SEA-LION-v3-9B-IT
+- Download [Gemma-SEA-LION-v3-9B-IT](https://huggingface.co/aisingapore/Gemma-SEA-LION-v3-9B-IT).
+- Copy the model or add a symbolic link in the `models` directory. The path is `./models/Gemma-SEA-LION-v3-9B-IT`. For example, if the model was downloaded to `~/downloads/Gemma-SEA-LION-v3-9B-IT`, the symbolic link is added by:
   ```bash
-  ln -s ~/downloads/gemma2-9b-cpt-sea-lionv3-instruct models/
+  ln -s ~/downloads/Gemma-SEA-LION-v3-9B-IT models/
   ```
 - Set `MODEL_NAME`.
   ```bash
-   export MODEL_NAME=gemma2-9b-cpt-sea-lionv3-instruct
+   export MODEL_NAME=Gemma-SEA-LION-v3-9B-IT
    ```
 
 ## Start vLLM
@@ -42,7 +42,7 @@ This section describes the setup of the SEA-LION models.
   curl http://localhost:8000/v1/completions \
     -H "Content-Type: application/json" \
     -d '{
-        "model": "llama3-8b-cpt-sea-lionv2.1-instruct",
+        "model": "Llama-SEA-LION-v3-8B-IT",
         "prompt": "Artificial Intelligence is",
         "max_tokens": 20,
         "temperature": 0.8,
